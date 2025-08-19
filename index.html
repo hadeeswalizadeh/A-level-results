@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hadees Results</title>
   <style>
+    :root { --maxw: 820px; }
+    * { box-sizing: border-box; }
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #f2f3f5;      /* soft page grey */
+      color: #222;
+    }
+    header {
       text-align: center;
-      padding: 20px;
+      padding: 26px 16px 10px;
     }
-    h1 {
-      color: #333;
+    h1 { margin: 0 0 6px; font-size: 1.4rem; }
+    p.sub { margin: 0; opacity: .8; }
+
+    .card {
+      background: #fff;          /* uniform white card */
+      max-width: var(--maxw);
+      margin: 18px auto;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 6px 18px rgba(0,0,0,.06);
     }
-    img {
-      max-width: 90%;
-      margin: 20px 0;
-      border: 2px solid #ddd;
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
+    footer {
+      max-width: var(--maxw);
+      margin: 10px auto 28px;
+      text-align: center;
+      font-size: .9rem;
+      color: #666;
+    }
+
+    /* make images tappable to full-size in a new tab */
+    .card a { text-decoration: none; }
   </style>
 </head>
 <body>
-  <h1>📜 Statement of Results</h1>
-  <p>Walizadeh Hadees – Solihull Sixth Form College</p>
+  <header>
+    <h1>📜 Statement of Results</h1>
+    <p class="sub">Walizadeh Hadees — Solihull Sixth Form College</p>
+  </header>
 
-  <img src="IMG_1277.jpeg" alt="Result Sheet 1">
-  <img src="IMG_1282.jpeg" alt="Result Sheet 2">
-  <img src="IMG_1418.jpeg" alt="Result Sheet 3">
+  <div class="card">
+    <a href="IMG_1277.jpeg" target="_blank" rel="noopener">
+      <img src="IMG_1277.jpeg" alt="Result Sheet 1" loading="lazy" />
+    </a>
+  </div>
 
+  <div class="card">
+    <a href="IMG_1282.jpeg" target="_blank" rel="noopener">
+      <img src="IMG_1282.jpeg" alt="Result Sheet 2" loading="lazy" />
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="IMG_1418.jpeg" target="_blank" rel="noopener">
+      <img src="IMG_1418.jpeg" alt="Result Sheet 3" loading="lazy" />
+    </a>
+  </div>
+
+  <footer>Tap any image to view full size.</footer>
 </body>
 </html>
